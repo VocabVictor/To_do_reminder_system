@@ -11,12 +11,13 @@ NProgress.configure({ showSpinner: false })
 const whiteList = ['/login', '/auth-redirect', '/bind', '/register']
 
 router.beforeEach((to, from, next) => {
+  console.log(to.path, 'to.path', from.path, 'from.path')
   NProgress.start()
   if (getToken()) {
     to.meta.title && store.dispatch('settings/setTitle', to.meta.title)
     /* has token*/
     if (to.path === '/login') {
-      next({ path: '/' })
+      next({ path: '/system' })
       NProgress.done()
     } else {
       if (store.getters.roles.length === 0) {
@@ -32,7 +33,7 @@ router.beforeEach((to, from, next) => {
         }).catch(err => {
             store.dispatch('LogOut').then(() => {
               Message.error(err)
-              next({ path: '/' })
+              next({ path: '/login' })
             })
           })
       } else {

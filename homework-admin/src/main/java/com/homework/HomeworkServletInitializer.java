@@ -8,11 +8,11 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  *
  * @author homework
  */
-public class RuoYiServletInitializer extends SpringBootServletInitializer
+public class HomeworkServletInitializer extends SpringBootServletInitializer
 {
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application)
     {
-        return application.sources(RuoYiApplication.class);
+        return application.sources(HomeworkApplication.class);
     }
 }

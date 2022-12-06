@@ -9,7 +9,7 @@ homework:
   # 实例演示开关
   demoEnabled: true
   # 文件路径 示例（ Windows配置D:/homework/uploadPath，Linux配置 /home/homework/uploadPath）
-  profile: D:/homework/uploadPath
+  profile: F:/To_do_reminder_system/uploadPath
   # 获取ip地址开关
   addressEnabled: false
   # 验证码类型 math 数组计算 char 字符验证
